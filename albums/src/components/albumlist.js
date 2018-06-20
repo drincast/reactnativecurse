@@ -21,17 +21,25 @@ class AlbumList extends Component{
       }));
   }
 
+  renderAlbums(){
+    this.state.albums.map(
+      album => <Text>{album.title}</Text>
+    );
+  }
+
   render(){
     console.log(this.state);
     return(
       <View>
-        <Text>Album list xxxx!!!!</Text>
-        <TestComponent></TestComponent>
+        {this.renderAlbums()}
       </View>
     );
   }
 }
 
+
+{/* <Text>Album list xxxx!!!!</Text>
+<TestComponent></TestComponent> */}
 
 
 export default AlbumList;
